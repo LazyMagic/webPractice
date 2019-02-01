@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BASE</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <p>继承测试</p>
+    {% block mainbody %}
+        <p>original</p>
+    {% endblock %}
+    <div>
+        <h1>  第二部分继承  </h1>
+        {% block second %}
+            <li>看看</li>
+        {% endblock %}
+    </div>
+
+</body>
+</html>

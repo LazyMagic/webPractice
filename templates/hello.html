@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+        {% extends "base.html" %}
+        {% block mainbody %}
+            <div> 主体部分重写 </div>
+        {% endblock %}
+
+        {% block second %}
+            <p>{{testList}}</p>
+        {% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <title>WebPractice</title>
+</head>
+<body>
+    <h1>
+        {{ hello }}
+        {% if hello == hello2 %}
+            <h2> hello1 </h2>
+        {% endif %}
+        {% ifequal hello hello2 %}
+            <h2> {{hello|lower|length}} </h2>
+        {% endifequal %}
+    </h1>
+
+    <h2>
+       {% for res in testList %}
+        <li> {{res.a}} </li>
+        <li> {{res.b}} </li>
+        {% endfor %}
+    </h2>
+</body>
+</html>
